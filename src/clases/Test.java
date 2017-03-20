@@ -5,6 +5,8 @@
  */
 package clases;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Jesus
@@ -12,18 +14,26 @@ package clases;
 public class Test {
     public static void main(String[] args) {
       Helper l = new Helper();
-        System.out.println("Esta la lista vacia ? " + l.estaVacio());
-        l.adicionarPrincipio(5);
-        System.out.println("Tamaño de la lista: " + l.obtenerTamano());
-        l.adicionarPrincipio("cinco");
-        l.adicionarPrincipio("diez");
-        l.adicionarPrincipio("tres");
-        System.out.println("Tamaño de la lista: " + l.obtenerTamano());
-        System.out.println("Esta la lista vacia ? " + l.estaVacio());
-        
-        System.out.println(l.mostrarContenido());
-        System.out.println(l.devolverValor(2));
+      Scanner lea = new Scanner(System.in); 
+       int numero;
+       String res;
+        boolean agregar=true;
+        while(agregar!=false){
+            
        
+       System.out.println("Digite el numero");
+        numero=lea.nextInt();
+       l.adicionarPrincipio(numero);
+        System.out.println("Desea agregar otro numero");
+      res=lea.next();
+        if (res.equalsIgnoreCase("Si")){
+        agregar=true;   
+       }else {
+                agregar= false;
+                }
+           
+        }
+        System.out.println(l.mostrarContenido());
     }
    
 }
