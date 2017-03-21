@@ -38,6 +38,8 @@ public class Test {
       l.mostrarMayor();
       l.mostrarMenor();
       l.contadorPares();
+      l.mostrarSuma();
+      l.mostrarProm();
         }
     }
    

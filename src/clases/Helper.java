@@ -112,8 +112,29 @@ public class Helper {
              }
              
          }
-         System.out.println("LA cantidad de numeros pares es: "+pares);
+         System.out.println("La cantidad de numeros pares es: "+pares);
      }
+        public void mostrarSuma(){
+            int acum=0;
+           
+           
+            for (int i = 0; i < size; i++) {
+             int numero= devolverValor(i); 
+             acum=acum+numero;
+            }
+            System.out.println("El valor de la suma es de "+acum);
+        }
+        public void mostrarProm(){
+         int acum=0;
+            int res;
+           
+            for (int i = 0; i < size; i++) {
+             int numero= devolverValor(i); 
+             acum=acum+numero;
+            }
+            res=acum/size;
+            System.out.println("El valor del promedio es de "+res);   
+        }
 }
 
 
