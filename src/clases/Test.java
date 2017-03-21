@@ -16,6 +16,7 @@ public class Test {
       Helper l = new Helper();
       Scanner lea = new Scanner(System.in); 
        int numero;
+       int mayor;
        String res;
         boolean agregar=true;
         while(agregar!=false){
@@ -33,7 +34,9 @@ public class Test {
                 }
            
         }
-        System.out.println(l.mostrarContenido());
+      l.mostrarContenido();
+      l.mostrarMayor();
+        }
     }
    
-}
+

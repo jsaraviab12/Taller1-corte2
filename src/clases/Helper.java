@@ -10,15 +10,16 @@ package clases;
  * @author Jesus
  */
 public class Helper {
+
     Nodo cabeza;
     int size;
-    public Helper(){
-    cabeza = null;
-    size=0;
+
+    public Helper() {
+        cabeza = null;
+        size = 0;
     }
-   
-    
- public void adicionarPrincipio(Object valor) {
+
+    public void adicionarPrincipio(Object valor) {
         if (cabeza == null) {
             Nodo nuevo = new Nodo(valor);
             cabeza = nuevo;
@@ -42,26 +43,52 @@ public class Helper {
         return this.size;
     }
 
-    public String mostrarContenido(){
-         Nodo  aux=cabeza;
-         String contenido="";
-        while(aux!=null){
-            contenido+=aux.getValor()+"\n"; 
-            aux=aux.getSiguiente();
-            
+    public void mostrarContenido() {
+
+        Nodo aux = cabeza;
+
+        while (aux != null) {
+            System.out.println(aux.getValor());//mostramos el dato
+            aux = aux.getSiguiente();
+        }
+
+    }
+
+    public String mostrarContenidoI() {
+
+        Nodo aux = cabeza;
+        String contenido = "";
+        while (aux != null) {
+            contenido += aux.getValor();//mostramos el dato
+            aux = aux.getSiguiente();
         }
         return contenido;
-         
     }
-   public Object devolverValor(int pos){
-    int contador=0;
-    Nodo aux = cabeza;
-    while(contador<pos){
-        aux=aux.getSiguiente();
-        contador++;
+
+    public int devolverValor(int pos) {
+        int contador = 0, aux1;
+        Nodo aux = cabeza;
+        while (contador < pos) {
+            aux = aux.getSiguiente();
+            contador++;
+        }
+        aux1 = (int) aux.getValor();
+        return aux1;
     }
-    return aux.getValor();
-   }
+
+    public void mostrarMayor() {
+        int mayor;
+        mayor = devolverValor(0);
+        for (int i = 0; i < size; i++) {
+            if (mayor > devolverValor(i)) {
+                mayor = mayor;
+            } else {
+                mayor = devolverValor(i);
+            }
+
+        }
+        System.out.println("El mayor es: "+mayor);
     }
-    
+}
+
 

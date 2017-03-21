@@ -32,10 +32,10 @@ public class Principa extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         cmdAgregar = new javax.swing.JButton();
         cmdMostar = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtArea = new javax.swing.JTextArea();
         cmdGenerar = new javax.swing.JButton();
         txtGenerado = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,12 +57,6 @@ public class Principa extends javax.swing.JFrame {
         });
         jPanel1.add(cmdMostar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, -1, -1));
 
-        txtArea.setColumns(20);
-        txtArea.setRows(5);
-        jScrollPane1.setViewportView(txtArea);
-
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 400, 170));
-
         cmdGenerar.setText("Generar");
         cmdGenerar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +65,15 @@ public class Principa extends javax.swing.JFrame {
         });
         jPanel1.add(cmdGenerar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 130, -1, -1));
         jPanel1.add(txtGenerado, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, 110, -1));
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(jList1);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 220, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -96,14 +99,14 @@ public class Principa extends javax.swing.JFrame {
        obj=txtGenerado.getText();
      
       h.adicionarPrincipio(obj);
-      txtArea.setText( h.mostrarContenido()+"\n"+h.obtenerTamano());
+    
       
       
     }//GEN-LAST:event_cmdAgregarActionPerformed
 
     private void cmdMostarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdMostarActionPerformed
         Helper h = new Helper();
-        txtArea.setText( h.mostrarContenido());
+        jList1.add(h.mostrarContenidoI());
     }//GEN-LAST:event_cmdMostarActionPerformed
 
     private void cmdGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdGenerarActionPerformed
@@ -151,9 +154,9 @@ public class Principa extends javax.swing.JFrame {
     private javax.swing.JButton cmdAgregar;
     private javax.swing.JButton cmdGenerar;
     private javax.swing.JButton cmdMostar;
+    private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea txtArea;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField txtGenerado;
     // End of variables declaration//GEN-END:variables
 }
