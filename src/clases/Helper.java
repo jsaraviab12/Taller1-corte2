@@ -54,17 +54,6 @@ public class Helper {
 
     }
 
-    public String mostrarContenidoI() {
-
-        Nodo aux = cabeza;
-        String contenido = "";
-        while (aux != null) {
-            contenido += aux.getValor();//mostramos el dato
-            aux = aux.getSiguiente();
-        }
-        return contenido;
-    }
-
     public int devolverValor(int pos) {
         int contador = 0, aux1;
         Nodo aux = cabeza;
@@ -87,54 +76,73 @@ public class Helper {
             }
 
         }
-        System.out.println("El mayor es: "+mayor);
+        System.out.println("El mayor es: " + mayor);
     }
-     public void mostrarMenor() {
+
+    public void mostrarMenor() {
         int menor;
-       menor = devolverValor(0);
+        menor = devolverValor(0);
         for (int i = 0; i < size; i++) {
             if (menor < devolverValor(i)) {
-                menor  = menor ;
+                menor = menor;
             } else {
-                menor  = devolverValor(i);
+                menor = devolverValor(i);
             }
 
         }
-        System.out.println("El menor es: "+menor );
+        System.out.println("El menor es: " + menor);
     }
-     public void contadorPares(){
-         int pares=0;
-         
-         for (int i = 0; i < size; i++) {
-             int numero= devolverValor(i);
-             if (numero%2==0) {
-                 pares++;
-             }
-             
-         }
-         System.out.println("La cantidad de numeros pares es: "+pares);
-     }
-        public void mostrarSuma(){
-            int acum=0;
-           
-           
-            for (int i = 0; i < size; i++) {
-             int numero= devolverValor(i); 
-             acum=acum+numero;
-            }
-            System.out.println("El valor de la suma es de "+acum);
-        }
-        public void mostrarProm(){
-         int acum=0;
-            int res;
-           
-            for (int i = 0; i < size; i++) {
-             int numero= devolverValor(i); 
-             acum=acum+numero;
-            }
-            res=acum/size;
-            System.out.println("El valor del promedio es de "+res);   
-        }
-}
 
+    public void contadorPares() {
+        int pares = 0;
+
+        for (int i = 0; i < size; i++) {
+            int numero = devolverValor(i);
+            if (numero % 2 == 0) {
+                pares++;
+            }
+
+        }
+        System.out.println("La cantidad de numeros pares es: " + pares);
+    }
+
+    public void mostrarSuma() {
+        int acum = 0;
+
+        for (int i = 0; i < size; i++) {
+            int numero = devolverValor(i);
+            acum = acum + numero;
+        }
+        System.out.println("El valor de la suma es de " + acum);
+    }
+
+    public void mostrarProm() {
+        int acum = 0;
+        int res;
+
+        for (int i = 0; i < size; i++) {
+            int numero = devolverValor(i);
+            acum = acum + numero;
+        }
+        res = acum / size;
+        System.out.println("El valor del promedio es de " + res);
+    }
+
+    public void adicionarPrincipioF() {
+        int factorial=1 ;
+        for (int i = 0; i < size; i++) {
+            int numero = devolverValor(i);
+              
+            for(factorial=numero;numero>1;numero--){
+                factorial*=(numero-1);
+               
+            }
+              System.out.println("Facotorial "+factorial); 
+            
+
+        }
+    }
+        
+
+    }
 

@@ -22,9 +22,10 @@ public class Test {
         while(agregar!=false){
             
        
-      numero= (int) (Math.random() * 50 + 1);
+      numero= (int) (Math.random() * 5+ 1);
             System.out.println(""+numero);
        l.adicionarPrincipio(numero);
+      
         System.out.println("Desea agregar otro numero");
       res=lea.next();
         if (res.equalsIgnoreCase("Si")){
@@ -40,6 +41,8 @@ public class Test {
       l.contadorPares();
       l.mostrarSuma();
       l.mostrarProm();
+      l.adicionarPrincipioF();
+        
         }
     }
    
