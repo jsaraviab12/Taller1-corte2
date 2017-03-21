@@ -36,6 +36,7 @@ public class Test {
         }
       l.mostrarContenido();
       l.mostrarMayor();
+      l.mostrarMenor();
         }
     }
    

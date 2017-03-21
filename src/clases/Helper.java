@@ -89,6 +89,19 @@ public class Helper {
         }
         System.out.println("El mayor es: "+mayor);
     }
+     public void mostrarMenor() {
+        int menor;
+       menor = devolverValor(0);
+        for (int i = 0; i < size; i++) {
+            if (menor < devolverValor(i)) {
+                menor  = menor ;
+            } else {
+                menor  = devolverValor(i);
+            }
+
+        }
+        System.out.println("El mayor es: "+menor );
+    }
 }
 
 
