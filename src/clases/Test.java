@@ -22,8 +22,8 @@ public class Test {
         while(agregar!=false){
             
        
-       System.out.println("Digite el numero");
-        numero=lea.nextInt();
+      numero= (int) (Math.random() * 50 + 1);
+            System.out.println(""+numero);
        l.adicionarPrincipio(numero);
         System.out.println("Desea agregar otro numero");
       res=lea.next();
@@ -37,6 +37,7 @@ public class Test {
       l.mostrarContenido();
       l.mostrarMayor();
       l.mostrarMenor();
+      l.contadorPares();
         }
     }
    

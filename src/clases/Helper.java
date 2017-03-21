@@ -100,8 +100,20 @@ public class Helper {
             }
 
         }
-        System.out.println("El mayor es: "+menor );
+        System.out.println("El menor es: "+menor );
     }
+     public void contadorPares(){
+         int pares=0;
+         
+         for (int i = 0; i < size; i++) {
+             int numero= devolverValor(i);
+             if (numero%2==0) {
+                 pares++;
+             }
+             
+         }
+         System.out.println("LA cantidad de numeros pares es: "+pares);
+     }
 }
 
 
