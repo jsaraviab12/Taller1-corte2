@@ -10,7 +10,7 @@ package clases;
  * @author Jesus
  */
 public class Helper {
-
+    Estudiantes head;
     Nodo cabeza;
     int size;
 
@@ -141,6 +141,27 @@ public class Helper {
             
 
         }
+    }
+     public void adicionarPrincipioEstudiantes(Object nombre, Object edad, Object sexo) {
+        if (head == null) {
+            Estudiantes nuevo = new Estudiantes(nombre, edad, sexo);
+            head = nuevo;
+        } else {
+            Estudiantes nuevo = new Estudiantes(nombre, edad, sexo);
+            nuevo.enlazarSiguiente(head);
+            head = nuevo;
+        }
+        size++;
+    }
+      public void mostrarEstudiantes() {
+
+        Estudiantes aux = head;
+
+        while (aux != null) {
+            System.out.println(" "+aux.getNombre()+" "+aux.getEdad()+" "+aux.getSexo());//mostramos el dato
+            aux = aux.getSiguiente();
+        }
+
     }
         
 

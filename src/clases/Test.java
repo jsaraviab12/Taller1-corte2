@@ -22,7 +22,7 @@ public class Test {
         while(agregar!=false){
             
        
-      numero= (int) (Math.random() * 5+ 1);
+      numero= (int) (Math.random() * 10+ 1);
             System.out.println(""+numero);
        l.adicionarPrincipio(numero);
       
