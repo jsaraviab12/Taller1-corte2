@@ -16,8 +16,9 @@ public class Test {
       Helper l = new Helper();
       Scanner lea = new Scanner(System.in); 
        int numero;
-       int mayor;
+       int eliminar;
        String res;
+       String eli;
         boolean agregar=true;
         while(agregar!=false){
             
@@ -35,15 +36,16 @@ public class Test {
                 }
            
         }
+     
+      
       l.mostrarContenido();
       l.mostrarMayor();
       l.mostrarMenor();
       l.contadorPares();
       l.mostrarSuma();
       l.mostrarProm();
-      l.adicionarPrincipioF();
-        
-        }
+      l.adicionarPrincipioF();        
     }
+}
    
 

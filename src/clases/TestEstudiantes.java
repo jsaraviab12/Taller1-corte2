@@ -27,7 +27,7 @@ public class TestEstudiantes {
             edad=lea.nextInt();
             System.out.println("Digite el Sexo del estudiante");
             sexo=lea.next();
-            l.adicionarPrincipioEstudiantes(nombre, edad, sexo);
+            l.adicionarPrincipio(l.adicionarPrincipioEstudiantes(nombre, edad, sexo));
        
       
         System.out.println("Desea agregar otro Estudiante");

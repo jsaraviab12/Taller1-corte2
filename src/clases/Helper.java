@@ -48,10 +48,16 @@ public class Helper {
         Nodo aux = cabeza;
 
         while (aux != null) {
-            System.out.println(aux.getValor());//mostramos el dato
+            System.out.println(aux.getValor());
             aux = aux.getSiguiente();
         }
 
+    }
+     public void verValorUltimo() {
+        Object aux;
+        aux = cabeza.getValor();
+
+         System.out.println("El ultimo es:"+aux);
     }
 
     public int devolverValor(int pos) {
@@ -64,6 +70,7 @@ public class Helper {
         aux1 = (int) aux.getValor();
         return aux1;
     }
+
 
     public void mostrarMayor() {
         int mayor;
@@ -142,28 +149,64 @@ public class Helper {
 
         }
     }
-     public void adicionarPrincipioEstudiantes(Object nombre, Object edad, Object sexo) {
-        if (head == null) {
-            Estudiantes nuevo = new Estudiantes(nombre, edad, sexo);
-            head = nuevo;
-        } else {
-            Estudiantes nuevo = new Estudiantes(nombre, edad, sexo);
-            nuevo.enlazarSiguiente(head);
-            head = nuevo;
-        }
-        size++;
+     public Object adicionarPrincipioEstudiantes(Object nombre, Object edad, Object sexo) {
+        Estudiantes e = new Estudiantes (nombre,edad,sexo);
+            return (e);
+        
     }
       public void mostrarEstudiantes() {
 
-        Estudiantes aux = head;
+        Nodo aux = cabeza;
+        Estudiantes e;
 
         while (aux != null) {
-            System.out.println(" "+aux.getNombre()+" "+aux.getEdad()+" "+aux.getSexo());//mostramos el dato
+            e = (Estudiantes) aux.getValor();
+            System.out.println(" "+e.getNombre()+" "+e.getEdad()+" "+e.getSexo());
             aux = aux.getSiguiente();
         }
 
     }
+    public void eliminarPrimero() {
+        cabeza = cabeza.getSiguiente();
+    }
+    public void eliminarUltimo(){
+        Nodo aux=cabeza;
+         while(aux.getSiguiente().getSiguiente() != null){
+                aux=aux.getSiguiente();
+            }
+          aux.setSiguiente(null);
+             
+            
+          
+        }
+    public void eliminarDado(int pos){
+         Nodo aux1;
+        Nodo aux = cabeza;
+        for (int i = 0; i < pos-1; i++) {
+
+            aux = aux.getSiguiente();
+            
+           
+        }
+       aux.setSiguiente(null);
+      aux1= aux.getSiguiente();
+      aux.setSiguiente(aux1.getSiguiente());
+    } public void cortarLista( int pos){
+        Nodo aux1;
+        Nodo aux = cabeza;
+        for (int i = 0; i < pos-1; i++) {
+
+            aux = aux.getSiguiente();
+   
+        }
+       aux.setSiguiente(null);
+      
+    }
+ 
+    }
+
+
         
 
-    }
+    
 

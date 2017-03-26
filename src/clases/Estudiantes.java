@@ -12,37 +12,16 @@ package clases;
 public class Estudiantes {
     private Object nombre;
     private Object edad;
-    private Object sexo;
-    private Estudiantes siguiente;
-
-   
-
-   
-    
-    public void enlazarSiguiente(Estudiantes n)
-    {
-        this.siguiente = n;
-    }
-    
-    public Estudiantes obtenerSiguiente()
-    {
-        return siguiente;
-    }
-
+    private Object sexo; 
+  
     public Estudiantes(Object nombre, Object edad, Object sexo) {
         this.nombre = nombre;
         this.edad = edad;
         this.sexo = sexo;
-        this.siguiente = null;
+       
     }
     
-     public Estudiantes getSiguiente() {
-        return siguiente;
-    }
-
-    public void setSiguiente(Estudiantes siguiente) {
-        this.siguiente = siguiente;
-    }
+    
 
     public Object getNombre() {
         return nombre;
